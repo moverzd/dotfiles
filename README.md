@@ -1,7 +1,3 @@
 # DOTFILES
-
-# To Do:
- - zsh
- - nvim
- - aerospace
+Repository with all dotfiles
     

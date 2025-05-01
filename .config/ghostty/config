@@ -6,7 +6,7 @@ window-decoration = auto
 # macos-titlebar-proxy-icon = hidden
 
 font-family = "JetBrainsMonoNL Nerd Font Mono"
-font-size = 20
+font-size = 22
 font-feature = -calt # to remove ligatures like ->
 font-feature = -dlig
 font-feature = -liga
