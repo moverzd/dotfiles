@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-
+#123123123
 export ZSH="$HOME/.oh-my-zsh" ##oh-my-zsh
 export PATH="/opt/homebrew/bin:$PATH" ## homebrew
 export PATH="$HOME/.emacs.d/bin:$PATH" ##emacs
