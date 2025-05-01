@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh" ##oh-my-zsh
 export PATH="/opt/homebrew/bin:$PATH" ## homebrew
 export PATH="$HOME/.emacs.d/bin:$PATH" ##emacs
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH" ## postgresql
-export PATH="/Library/TeX/texbin:$PATH"
+export PATH="/Library/TeX/texbin:$PATH" ## LaTex
 export TERM=xterm-256color
 
 # Set name of the theme to load --- if set to "random", it will
