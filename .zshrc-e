@@ -7,8 +7,6 @@ export PATH="/opt/homebrew/bin:$PATH" ## homebrew
 export PATH="$HOME/.emacs.d/bin:$PATH" ##emacs
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH" ## postgresql
 export PATH="/Library/TeX/texbin:$PATH"
-export TERM=xterm-256color
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -105,21 +103,3 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:/Library/TeX/texbin
 export PATH=/Library/TeX/texbin:$PATH
-
-[ -f "/Users/moverzd/.ghcup/env" ] && . "/Users/moverzd/.ghcup/env" # ghcup-envexport PATH=/opt/homebrew/anaconda3/bin:$PATH
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
