@@ -1,12 +1,12 @@
 theme = "GruvBoxDarkHard"
 background-opacity = 0.9
 background-blur-radius = 9
-window-decoration = auto
-# macos-titlebar-style = hidden
-# macos-titlebar-proxy-icon = hidden
+window-decoration = none
+macos-titlebar-style = hidden
+macos-titlebar-proxy-icon = hidden
 
 font-family = "JetBrainsMonoNL Nerd Font Mono"
-font-size = 22
+font-size = 16
 font-feature = -calt # to remove ligatures like ->
 font-feature = -dlig
 font-feature = -liga

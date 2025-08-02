@@ -120,7 +120,7 @@ alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
-#alt-6 = 'workspace 6'
+alt-c = 'workspace chat' # chats: whatsapp/telegram etc
 
 
 
@@ -130,7 +130,7 @@ alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
-#alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-c = 'move-node-to-workspace chat'
 
 
 
@@ -162,13 +162,55 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
-if.app-id = 'org.jkiss.dbeaver.core.product'
-run = 'layout floating'
+if.app-id = 'com.apple.Safari'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = 'layout floating'
+if.app-name-regex-substring = 'dbeaver'
+#if.app-name-regex-substring= 'Settings'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['layout floating', 'move-node-to-workspace 4']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.AppStore'
+if.app-id = 'com.microsoft.vscode'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id= 'md.obsidian'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.tdesktop.Telegram'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace chat']
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace chat']
+
+#[[on-window-detected]]
+#if.app-id = 'com.apple.finder'
+#run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.appstore'
+if.during-aerospace-startup = true
+check-further-callbacks = true
 run = ' layout floating'
+
