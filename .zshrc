@@ -1,7 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-#123123123
 export ZSH="$HOME/.oh-my-zsh" ##oh-my-zsh
 export PATH="/opt/homebrew/bin:$PATH" ## homebrew
 export PATH="$HOME/.emacs.d/bin:$PATH" ##emacs
@@ -9,7 +8,7 @@ export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH" ## postgresql
 export PATH=$PATH:/opt/homebrew/bin/go ## Golang
 export PATH="/Library/TeX/texbin:$PATH" ## LaTex
 export TERM=xterm-256color
-
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/" ## Docker
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -124,3 +123,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# open obsidian icloud directory in nvim via nvim-obs command
+alias nvim-obs='cd "/Users/moverzd/Library/Mobile Documents/iCloud~md~obsidian/Documents" && nvim'  
+alias obsidian='cd "/Users/moverzd/Library/Mobile Documents/iCloud~md~obsidian/Documents"'

@@ -25,7 +25,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # The 'accordion-padding' specifies the size of accordion padding
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # You can set 0 to disable the padding feature
-accordion-padding = 30
+accordion-padding = 0
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -54,7 +54,7 @@ on-focus-changed = ["move-mouse window-lazy-center"]
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 5
+inner.horizontal = 8
 inner.vertical =   5
 outer.left =       5
 outer.bottom =     5
@@ -115,23 +115,26 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
+alt-1 = 'workspace main'
+alt-2 = 'workspace coding'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
 alt-c = 'workspace chat' # chats: whatsapp/telegram etc
+alt-t = 'workspace terminal'
+alt-o = 'workspace obsidian'
 
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-1 = 'move-node-to-workspace main'
+alt-shift-2 = 'move-node-to-workspace coding'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-c = 'move-node-to-workspace chat'
-
+alt-shift-t = 'move-node-to-workspace terminal'
+alt-shift-o = 'move-node-to-workspace obsidian'
 
 
 
@@ -165,35 +168,35 @@ alt-shift-l = ['join-with right', 'mode main']
 if.app-id = 'com.apple.Safari'
 if.during-aerospace-startup = true
 check-further-callbacks = true
-run = ['move-node-to-workspace 1']
+run = ['move-node-to-workspace main']
 
-[[on-window-detected]]
-if.app-name-regex-substring = 'dbeaver'
+#[[on-window-detected]]
+#if.app-name-regex-substring = 'dbeaver'
 #if.app-name-regex-substring= 'Settings'
-if.during-aerospace-startup = true
-check-further-callbacks = true
-run = ['layout floating', 'move-node-to-workspace 4']
+#if.during-aerospace-startup = true
+#check-further-callbacks = true
+#run = ['layout floating', 'move-node-to-workspace 4']
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.vscode'
+if.app-id = 'com.microsoft.VSCode'
 if.during-aerospace-startup = true
 check-further-callbacks = true
-run = ['move-node-to-workspace 2']
+run = ['move-node-to-workspace coding']
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 if.during-aerospace-startup = true
 check-further-callbacks = true
-run = ['move-node-to-workspace 2']
+run = ['move-node-to-workspace terminal']
 
 [[on-window-detected]]
 if.app-id= 'md.obsidian'
 if.during-aerospace-startup = true
 check-further-callbacks = true
-run = ['move-node-to-workspace 3']
+run = ['move-node-to-workspace obsidian']
 
 [[on-window-detected]]
-if.app-id = 'com.tdesktop.Telegram'
+if.app-id = 'ru.keepcoder.Telegram'
 if.during-aerospace-startup = true
 check-further-callbacks = true
 run = ['move-node-to-workspace chat']
@@ -204,9 +207,11 @@ if.during-aerospace-startup = true
 check-further-callbacks = true
 run = ['move-node-to-workspace chat']
 
-#[[on-window-detected]]
-#if.app-id = 'com.apple.finder'
-#run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.appstore'
@@ -214,3 +219,22 @@ if.during-aerospace-startup = true
 check-further-callbacks = true
 run = ' layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 3']
+
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.intellij'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 3']
+
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 3']
